@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Know Your Writes | Interactive Location</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+        <!-- Main Page Header -->
+    <header>
+        <h1>Know Your Writes</h1>
+        <nav>
+            <a href="Medical Writing.html">About us</a>
+            <a href="Copywriting.html">Experience</a>
+            <a href="Proofreading.html">The Write Price</a>
+        </nav>
+    </header>
+
+    <!-- Main Page Header -->
+    <header>
+        <h1>Skills</h1>
+        <nav>
+            <a href="Medical Writing.html">Medical Writing</a>
+            <a href="Copywriting.html">Health Copywriting</a>
+            <a href="Proofreading.html">Proofreading</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Experience Section (Replaces your extra header) -->
+        <section>
+            <h2>The Write Experience</h2>
+            <nav>
+                <a href="qualifications.html">Qualifications</a>
+                <a href="science-copywriting.html">Science Copywriting</a>
+                <a href="meeting-place.html">Recommended Meeting Place</a>
+            </nav>
+            <p>Reliable proof-reading with an eye for scientific and grammatical precision.</p>
+        </section>
+
+        <!-- Location Section with Small Card -->
+        <section class="location-card">
+            <h3>Our Tutoring Location</h3>
+            <p>Orpington, London. Click to enlarge:</p>
+
+            <div class="iframe-container" onclick="toggleFullscreen()">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.819243221692!2d-0.127758!3d51.507351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604ce3941eb1f%3A0x1a5342f50287431!2sTrafalgar%20Square!5e0!3m2!1sen!2suk!4v1625123456789" 
+                    title="Google Maps Location" 
+                    loading="lazy" 
+                    allowfullscreen="" 
+                    sandbox="allow-scripts allow-same-origin allow-popups">
+                </iframe>
+            </div>
+
+            <div class="iframe-controls">
+                <button onclick="reloadFrame()">Reload</button>
+                <button onclick="toggleFullscreen()">Full Screen</button>
+            </div>
+        </section>
+
+        <aside>
+            <h3>Visitor Information</h3>
+            <p>Parking is available behind the STEM center. Please sign in at the front desk upon arrival.</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 DataPulse Clinical Systems. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function reloadFrame() {
+            const frame = document.querySelector('iframe');
+            frame.src = frame.src;
+        }
+
+        function toggleFullscreen() {
+            const frame = document.querySelector('iframe');
+            if (frame.requestFullscreen) { frame.requestFullscreen(); }
+            else if (frame.webkitRequestFullscreen) { frame.webkitRequestFullscreen(); }
+        }
+    </script>
+
+</body>
+</html>
